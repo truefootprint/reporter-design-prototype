@@ -1,5 +1,12 @@
+import Layout from "../components/layout";
+import Phone from "../components/phone";
+
 const Index = () => (
-  <p>Hello, world!</p>
+  <Layout>
+    <Phone>
+
+    </Phone>
+  </Layout>
 );
 
 export default Index;
