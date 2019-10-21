@@ -1,0 +1,27 @@
+.gallery {
+  height: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  & > div {
+    width: 80%;
+    height: 100%;
+    display: inline-block;
+  }
+}
+
+.previous_card {
+  transform: scale(0.9);
+}
+
+.current_card {
+
+}
+
+.next_card {
+  transform: scale(0.9);
+}
