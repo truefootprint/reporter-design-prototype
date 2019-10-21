@@ -12,6 +12,8 @@ const Index = () => (
           <Card>first</Card>
           <Card>second</Card>
           <Card>third</Card>
+          <Card>fourth</Card>
+          <Card>fifth</Card>
         </Gallery>
       </CardLayout>
     </Phone>

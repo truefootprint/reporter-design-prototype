@@ -2,6 +2,12 @@
   height: 100%;
   border-radius: 1vh;
   background: white;
+  overflow: hidden;
+}
+
+.content {
+  height: 100%;
+  overflow-y: auto;
 }
 
 .colored_bar {
