@@ -16,11 +16,11 @@ const Index = () => (
         </Summary>
 
         <Gallery>
-          <Card>first</Card>
-          <Card>second</Card>
-          <Card>third</Card>
-          <Card>fourth</Card>
-          <Card>fifth</Card>
+          <Card color="#12814f">first</Card>
+          <Card color="#fff120">second</Card>
+          <Card color="#a3c643">third</Card>
+          <Card color="#ff4c1f">fourth</Card>
+          <Card color="#c62b9f">fifth</Card>
         </Gallery>
       </CardLayout>
     </Phone>
