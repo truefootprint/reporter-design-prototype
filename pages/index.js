@@ -8,19 +8,24 @@ import Card from "../components/card";
 const Index = () => (
   <Layout>
     <Phone>
-      <CardLayout title="Build a school in Vihiga">
+      <CardLayout>
         <Summary>
+          <h1>Build a school in Vihiga</h1>
           <h2>Project summary</h2>
           <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
           <button>Project contract</button>
+          <button>Record an issue</button>
+          <button>Issues in this project (7)</button>
         </Summary>
 
         <Gallery>
-          <Card color="#12814f">
+          <Card color="#b45f67">
             <span className="ordinal">1 of 5</span>
-            <h3>Clear the land</h3>
+            <h3 style={{ color: "#b45f67" }}>Clear the land</h3>
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
             <img src="/images/map.png" />
+            <button className="alt1">Update progress</button>
+            <button>Record an issue</button>
           </Card>
 
           <Card color="#fff120">

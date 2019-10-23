@@ -1,6 +1,5 @@
 .card_layout {
   height: 100%;
-  padding-top: 5vh;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -11,21 +10,32 @@
     display: none;
   }
 
-  h1 {
-    color: #eee;
-    text-align: center;
-    font-size: 3.2vh;
-    margin-bottom: 2.5vh;
-    letter-spacing: 0.15vh;
-  }
-
   .content {
     flex: 1;
+  }
 
-    &:after {
-      content: "";
-      display: block;
-      height: 4vh;
+  button {
+    width: 100%;
+    background: white;
+    font-size: 1.7vh;
+    padding: 2vh 0;
+    border-radius: 1vh;
+    font-weight: 500;
+    letter-spacing: 0.05vh;
+    margin-bottom: 3vh;
+    box-shadow: 0.2vh 0.2vh 0.7vh rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    color: #b6646b;
+    border: 1px solid #b6646b;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:global(.alt1) {
+      background: #b45f67;
+      color: white;
+      text-transform: uppercase;
     }
   }
 }

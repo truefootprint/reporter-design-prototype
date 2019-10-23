@@ -1,8 +1,8 @@
 .card {
-  height: 100%;
   border-radius: 1vh;
   background: white;
   overflow: hidden;
+  box-shadow: 0.3vh 0.3vh 1vh #aaa;
 }
 
 .colored_bar {
@@ -39,5 +39,9 @@
   img {
     width: 100%;
     margin-bottom: 2.8vh;
+  }
+
+  button:last-child {
+    margin-bottom: 0;
   }
 }

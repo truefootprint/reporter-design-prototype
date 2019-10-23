@@ -1,9 +1,11 @@
 .gallery {
-  height: 100%;
+  height: 70vh;
   overflow-x: auto;
   white-space: nowrap;
   scroll-behavior: smooth;
   scrollbar-width: none;
+  background: #ebebeb;
+  padding: 4vh 0;
 
   &::-webkit-scrollbar {
     display: none;

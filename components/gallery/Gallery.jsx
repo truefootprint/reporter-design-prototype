@@ -2,7 +2,7 @@ import { useState, useEffect, useRef, createRef } from "react";
 import css from "./styles.scss";
 
 const minSize = 0.88;
-const minOpacity = 0.5;
+const minOpacity = 0.7;
 
 const LEFT_KEY = 37;
 const RIGHT_KEY = 39;
