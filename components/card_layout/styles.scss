@@ -1,10 +1,16 @@
 .card_layout {
   height: 100%;
-  padding: 5vh 0 4vh 0;
+  padding-top: 5vh;
   box-sizing: border-box;
 
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   h1 {
     color: #eee;
@@ -15,5 +21,11 @@
 
   .content {
     flex: 1;
+
+    &:after {
+      content: "";
+      display: block;
+      height: 4vh;
+    }
   }
 }
