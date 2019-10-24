@@ -40,6 +40,12 @@
   align-items: center;
   justify-content: space-around;
 
+  .button {
+    margin: auto;
+    padding: 2vh;
+    cursor: pointer;
+  }
+
   .back {
     width: 2.7vh;
     height: 3vh;
@@ -49,7 +55,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
 
     &:after {
       content: "";

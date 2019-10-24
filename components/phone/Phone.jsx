@@ -29,9 +29,17 @@ const Phone = ({ children }) => {
       </div>
 
       <div className={css.buttons}>
-        <div className={css.back} onClick={() => window.onback()} />
-        <div className={css.home} onClick={() => alert("This button is disabled.")} />
-        <div className={css.apps} onClick={() => alert("This button is disabled.")} />
+        <div className={css.button} onClick={() => window.onback()}>
+          <div className={css.back} />
+        </div>
+
+        <div className={css.button} onClick={() => alert("This button is disabled.")}>
+          <div className={css.home} />
+        </div>
+
+        <div className={css.button} onClick={() => alert("This button is disabled.")}>
+          <div className={css.apps} />
+        </div>
       </div>
     </div>
   );
