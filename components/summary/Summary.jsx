@@ -1,7 +1,7 @@
 import css from "./styles.scss";
 
-const Summary = ({ children }) => (
-  <div className={css.summary}>
+const Summary = ({ children, className }) => (
+  <div className={`${css.summary} ${className}`}>
     {children}
   </div>
 );

@@ -1,3 +1,5 @@
+@import "../layout/color.scss";
+
 .card_layout {
   height: 100%;
   box-sizing: border-box;
@@ -26,17 +28,14 @@
     margin-bottom: 3vh;
     box-shadow: 0.2vh 0.2vh 0.7vh rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    color: #b6646b;
     border: 1px solid #b6646b;
+
+    &:global(.alt1) {
+      text-transform: uppercase;
+    }
 
     &:focus {
       outline: none;
-    }
-
-    &:global(.alt1) {
-      background: #b45f67;
-      color: white;
-      text-transform: uppercase;
     }
   }
 }

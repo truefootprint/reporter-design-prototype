@@ -1,7 +1,8 @@
+@import "../layout/color.scss";
+
 .summary {
   padding: 5vh 10% 3vh 10%;
   letter-spacing: 0.15vh;
-  background: #b45f67;
   color: #eee;
   position: relative;
   overflow: hidden;
@@ -14,7 +15,6 @@
     bottom: 0;
     left: 33%;
     border-radius: 50%;
-    background: #a25c63;
   }
 
   > * {
@@ -41,5 +41,18 @@
     font-size: 1.8vh;
     line-height: 1.6;
     margin-bottom: 5vh;
+  }
+}
+
+@include themed(".summary") {
+  background: var(--primary);
+
+  &:before {
+    background: var(--primary-tint);
+  }
+
+  button {
+    color: var(--secondary);
+    border: 1px solid var(--secondary);
   }
 }

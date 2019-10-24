@@ -1,8 +1,8 @@
 import css from "./styles.scss";
 
-const Card = ({ children, color }) => (
-  <div className={css.card}>
-    <div className={css.colored_bar} style={{ background: color }} />
+const Card = ({ children, className }) => (
+  <div className={`${css.card} ${className}`}>
+    <div className={css.colored_bar} />
 
     <div className={css.content}>
       {children}

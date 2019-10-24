@@ -1,0 +1,95 @@
+:root {
+  --green-primary:         rgb(108, 187, 154);
+  --green-primary-tint:    rgb(103, 177, 146);
+  --green-secondary:       rgb(95, 115, 106);
+  --green-secondary-tint:  rgb(75, 87, 81);
+
+  --yellow-primary:        rgb(211, 191, 115);
+  --yellow-primary-tint:   rgb(198, 180, 110);
+  --yellow-secondary:      rgb(159, 155, 105);
+  --yellow-secondary-tint: rgb(110, 107, 71);
+
+  --blue-primary:          rgb(70, 137, 168);
+  --blue-primary-tint:     rgb(63, 129, 160);
+  --blue-secondary:        rgb(77, 104, 117);
+  --blue-secondary-tint:   rgb(53, 76, 86);
+
+  --red-primary:           rgb(187, 107, 115);
+  --red-primary-tint:      rgb(171, 104, 111);
+  --red-secondary:         rgb(133, 91, 101);
+  --red-secondary-tint:    rgb(108, 69, 79);
+
+  --purple-primary:        rgb(112, 99, 142);
+  --purple-primary-tint:   rgb(103, 91, 129);
+  --purple-secondary:      rgb(78, 64, 83);
+  --purple-secondary-tint: rgb(56, 42, 61);
+
+  --black-primary:         rgb(51, 51, 51);
+  --black-primary-tint:    rgb(17, 17, 17);
+
+  --white-primary:         rgb(238, 238, 237);
+  --white-primary-tint:    rgb(229, 229, 224);
+  --white-primary-tint2:   rgb(213, 213, 206);
+}
+
+@mixin themed($selector) {
+  #{$selector}:global(.green) {
+    --primary:        var(--green-primary);
+    --primary-tint:   var(--green-primary-tint);
+    --secondary:      var(--green-secondary);
+    --secondary-tint: var(--green-secondary-tint);
+
+    @content;
+  }
+
+  #{$selector}:global(.yellow) {
+    --primary:        var(--yellow-primary);
+    --primary-tint:   var(--yellow-primary-tint);
+    --secondary:      var(--yellow-secondary);
+    --secondary-tint: var(--yellow-secondary-tint);
+
+    @content;
+  }
+
+  #{$selector}:global(.blue) {
+    --primary:        var(--blue-primary);
+    --primary-tint:   var(--blue-primary-tint);
+    --secondary:      var(--blue-secondary);
+    --secondary-tint: var(--blue-secondary-tint);
+
+    @content;
+  }
+
+  #{$selector}:global(.red) {
+    --primary:        var(--red-primary);
+    --primary-tint:   var(--red-primary-tint);
+    --secondary:      var(--red-secondary);
+    --secondary-tint: var(--red-secondary-tint);
+
+    @content;
+  }
+
+  #{$selector}:global(.purple) {
+    --primary:        var(--purple-primary);
+    --primary-tint:   var(--purple-primary-tint);
+    --secondary:      var(--purple-secondary);
+    --secondary-tint: var(--purple-secondary-tint);
+
+    @content;
+  }
+
+  #{$selector}:global(.black) {
+    --primary:        var(--black-primary);
+    --primary-tint:   var(--black-primary-tint);
+
+    @content;
+  }
+
+  #{$selector}:global(.white) {
+    --primary:        var(--white-primary);
+    --primary-tint:   var(--white-primary-tint);
+    --primary-tint2:  var(--white-primary-tint2);
+
+    @content;
+  }
+}

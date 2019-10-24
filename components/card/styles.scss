@@ -1,3 +1,5 @@
+@import "../layout/color.scss";
+
 .card {
   border-radius: 1vh;
   background: white;
@@ -43,5 +45,26 @@
 
   button:last-child {
     margin-bottom: 0;
+  }
+}
+
+@include themed(".card") {
+  .colored_bar {
+    background: var(--primary);
+  }
+
+  h3 {
+    color: var(--primary);
+  }
+
+  button {
+    color: var(--secondary);
+    border: 1px solid var(--secondary);
+
+    &:global(.alt1) {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: white;
+    }
   }
 }
