@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, createRef } from "react";
+import smoothscroll from "smoothscroll-polyfill";
 import css from "./styles.scss";
 
 const minSize = 0.88;
@@ -55,22 +56,30 @@ const Gallery = ({ children }) => {
     const itemRect = itemRefs.current[0].getBoundingClientRect();
     setBaseWidth(itemRect.width);
 
-    const listener = window.addEventListener("keydown",  handleKeyDown);
+    smoothscroll.polyfill();
+
+    const listener = window.addEventListener("keydown",  (event) => {
+      if (event.keyCode === LEFT_KEY) left();
+      if (event.keyCode === RIGHT_KEY) right();
+    });
+
+    new window.Hammer(galleryRef.current, {}).on("swipe", (event) => {
+      if (event.direction === Hammer.DIRECTION_RIGHT) left();
+      if (event.direction === Hammer.DIRECTION_LEFT) right();
+    });
+
+    window.onback = () => left();
+
+    // TODO: unbind swipe listener
+
     return () => window.removeEventListener(listener);
   }, []);
 
-  const handleKeyDown = (event) => {
-    if (event.keyCode == LEFT_KEY)  {
-      setItemIndex(i => Math.max(i - 1, 0));
-    }
-
-    if (event.keyCode == RIGHT_KEY) {
-      setItemIndex(i => Math.min(i + 1, children.length - 1));
-    }
-  };
+  const left = () => setItemIndex(i => Math.max(i - 1, 0));
+  const right = () => setItemIndex(i => Math.min(i + 1, children.length - 1));
 
   useEffect(() => {
-    galleryRef.current.scrollTo(itemIndex * baseWidth, 0);
+    galleryRef.current.scroll({ left: itemIndex * baseWidth, behavior: "smooth" });
   }, [itemIndex]);
 
   return (
