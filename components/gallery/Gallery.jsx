@@ -63,7 +63,16 @@ const Gallery = ({ children }) => {
       if (event.keyCode === RIGHT_KEY) right();
     });
 
-    new window.Hammer(galleryRef.current, {}).on("swipe", (event) => {
+    // https://github.com/hammerjs/hammer.js/issues/1065#issuecomment-285855090
+    const hammer = new Hammer.Manager(galleryRef.current, {
+      touchAction: 'auto',
+      inputClass: Hammer.SUPPORT_POINTER_EVENTS ? Hammer.PointerEventInput : Hammer.TouchInput,
+      recognizers: [
+        [Hammer.Swipe, { direction: Hammer.DIRECTION_HORIZONTAL }]
+      ]
+    });
+
+    hammer.on("swipe", (event) => {
       if (event.direction === Hammer.DIRECTION_RIGHT) left();
       if (event.direction === Hammer.DIRECTION_LEFT) right();
     });
