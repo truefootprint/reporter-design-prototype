@@ -4,6 +4,7 @@ import CardLayout from "../components/card_layout";
 import Summary from "../components/summary";
 import Gallery from "../components/gallery";
 import Card from "../components/card";
+import MultiChoice from "../components/questions/multi_choice";
 
 const Index = () => (
   <Layout>
@@ -23,6 +24,7 @@ const Index = () => (
             <span className="ordinal">1 of 5</span>
             <h3>Clear the land</h3>
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
+            <MultiChoice choices={["Yes", "No", "Not sure"]} />
             <img src="/images/map.png" />
             <button className="alt1">Update progress</button>
             <button>Record an issue</button>
