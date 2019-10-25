@@ -53,8 +53,8 @@
   }
 
   button {
-    color: var(--secondary);
-    border: 1px solid var(--secondary);
+    color: var(--primary);
+    border: 1px solid var(--primary);
 
     &:global(.alt1) {
       background: var(--primary);
