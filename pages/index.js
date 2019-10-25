@@ -4,6 +4,7 @@ import CardLayout from "../components/card_layout";
 import Summary from "../components/summary";
 import Gallery from "../components/gallery";
 import Card from "../components/card";
+import FreeText from "../components/questions/free_text";
 import MultiChoice from "../components/questions/multi_choice";
 
 const Index = () => (
@@ -20,35 +21,34 @@ const Index = () => (
         </Summary>
 
         <Gallery>
-          <Card className="green">
+          <Card className="red">
             <span className="ordinal">1 of 5</span>
             <h3>Clear the land</h3>
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
-            <MultiChoice choices={["Yes", "No", "Not sure"]} />
             <img src="/images/map.png" />
             <button className="alt1">Update progress</button>
             <button>Record an issue</button>
           </Card>
 
-          <Card className="yellow">
+          <Card className="green">
             <span className="ordinal">2 of 5</span>
             <h3>Lay the foundations</h3>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
-            <img src="/images/map.png" />
-            <button className="alt1">Update progress</button>
-            <button>Record an issue</button>
+            <p>Are the foundations laid?</p>
+            <MultiChoice choices={["Yes", "No", "Not sure"]} />
+            <button className="alt1">Submit</button>
           </Card>
 
           <Card className="blue">
             <span className="ordinal">3 of 5</span>
             <h3>Build the walls</h3>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
-            <img src="/images/map.png" />
-            <button className="alt1">Update progress</button>
-            <button>Record an issue</button>
+            <FreeText text="What is the length of the walls?"
+                      expected="They should be 5 metres wide"
+                      placeholder="Add a value"
+                      unit="metres" />
+            <button className="alt1">Submit</button>
           </Card>
 
-          <Card className="red">
+          <Card className="yellow">
             <span className="ordinal">4 of 5</span>
             <h3>Put the roof on</h3>
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>

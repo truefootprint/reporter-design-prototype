@@ -1,0 +1,85 @@
+@import "../../layout/color.scss";
+
+.free_text {
+  font-size: 2.2vh;
+
+  p {
+    margin-bottom: 0;
+  }
+
+  textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    font-size: 2.35vh;
+    letter-spacing: 0.05vh;
+    padding: 1vh 0;
+    color: #333;
+    scrollbar-width: none;
+    line-height: 1.6;
+    resize: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &::placeholder {
+      font-size: 2.2vh;
+      font-style: italic;
+      color: #aaa;
+    }
+
+    &:focus {
+      outline: none;
+
+      &::placeholder {
+        opacity: 0;
+      }
+
+      & + .outer_placeholder {
+        display: inline;
+      }
+    }
+  }
+
+  .outer_placeholder {
+    position: absolute;
+    top: -3vh;
+    left: 0;
+    color: #aaa;
+    font-size: 80%;
+    letter-spacing: 0;
+
+    display: none;
+  }
+
+  .field {
+    margin: 10vh 0;
+    position: relative;
+  }
+
+  .unit {
+    position: absolute;
+    right: 0;
+    bottom: 2.2vh;
+    font-size: 2vh;
+  }
+}
+
+.expected {
+  font-style: italic;
+}
+
+@include themed(":global(.card)") {
+  .expected {
+    color: var(--primary);
+  }
+
+  .unit {
+    color: var(--primary);
+  }
+
+  .free_text textarea:focus {
+    border-bottom: 2px solid var(--primary);
+  }
+}

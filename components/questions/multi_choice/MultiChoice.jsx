@@ -2,7 +2,7 @@ import { useState } from "react";
 import css from "./styles.scss";
 
 const MultiChoice = ({ choices }) => {
-  const [selected, setSelected] = useState(0);
+  const [selected, setSelected] = useState(null);
 
   return (
     <ul className={css.multi_choice}>
