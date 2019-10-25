@@ -6,17 +6,21 @@
 }
 
 .item {
-  width: 80%;
+  width: 86%;
   display: inline-block;
   vertical-align: top;
   white-space: normal;
   position: relative;
 
   &:first-child {
-    margin-left: 10%;
+    margin-left: 7%;
   }
 
   &:last-child {
-    margin-right: 10%;
+    margin-right: 7%;
   }
+}
+
+.inner {
+  margin: 0 -1.5%;
 }

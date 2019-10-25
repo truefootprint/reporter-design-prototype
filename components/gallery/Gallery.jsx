@@ -22,7 +22,9 @@ const Gallery = ({ children }) => {
     <div key={i} ref={e => itemRefs.current[i] = e} className={css.item}
          style={{ transform: `scale(${sizes[i]})`, opacity: opacities[i] }}>
 
-      {child}
+      <div className={css.inner}>
+        {child}
+      </div>
     </div>
   ));
 
