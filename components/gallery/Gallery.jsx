@@ -18,11 +18,11 @@ const Gallery = ({ children }) => {
   const galleryRef = useRef();
   const itemRefs = useRef(children.map(c => createRef()));
 
-  const items = children.map((c, i) => (
+  const items = children.map((child, i) => (
     <div key={i} ref={e => itemRefs.current[i] = e} className={css.item}
          style={{ transform: `scale(${sizes[i]})`, opacity: opacities[i] }}>
 
-      <div className={css.inner}>{c}</div>
+      {child}
     </div>
   ));
 

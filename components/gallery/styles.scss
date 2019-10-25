@@ -1,6 +1,5 @@
 .gallery {
-  height: 70vh;
-  overflow: hidden;
+  overflow-x: hidden;
   white-space: nowrap;
   background: #ebebeb;
   padding: 4vh 0;
@@ -8,7 +7,6 @@
 
 .item {
   width: 80%;
-  height: 100%;
   display: inline-block;
   vertical-align: top;
   white-space: normal;
@@ -21,12 +19,4 @@
   &:last-child {
     margin-right: 10%;
   }
-}
-
-.inner {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
 }
