@@ -6,6 +6,8 @@ import Gallery from "../components/gallery";
 import Card from "../components/card";
 import FreeText from "../components/questions/free_text";
 import MultiChoice from "../components/questions/multi_choice";
+import QuestionText from "../components/question_text";
+import ExpectedValue from "../components/expected_value";
 
 const Index = () => (
   <Layout>
@@ -33,7 +35,7 @@ const Index = () => (
           <Card className="green">
             <span className="ordinal">2 of 5</span>
             <h3>Lay the foundations</h3>
-            <p>Are the foundations laid?</p>
+            <QuestionText>Are the foundations laid?</QuestionText>
             <MultiChoice choices={["Yes", "No", "Not sure"]} />
             <button className="alt1">Submit</button>
           </Card>
@@ -41,10 +43,9 @@ const Index = () => (
           <Card className="blue">
             <span className="ordinal">3 of 5</span>
             <h3>Build the walls</h3>
-            <FreeText text="What is the length of the walls?"
-                      expected="They should be 5 metres wide"
-                      placeholder="Add a value"
-                      unit="metres" />
+            <QuestionText>What is the length of the walls?</QuestionText>
+            <ExpectedValue>They should be 5 metres wide</ExpectedValue>
+            <FreeText placeholder="Add a value" unit="metres" />
             <button className="alt1">Submit</button>
           </Card>
 

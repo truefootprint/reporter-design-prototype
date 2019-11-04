@@ -1,12 +1,6 @@
 @import "../../layout/color.scss";
 
 .free_text {
-  font-size: 2.2vh;
-
-  p {
-    margin-bottom: 0;
-  }
-
   textarea {
     width: 100%;
     border: none;
@@ -67,15 +61,7 @@
   }
 }
 
-.expected {
-  font-style: italic;
-}
-
 @include themed(":global(.card)") {
-  .expected {
-    color: var(--primary);
-  }
-
   .unit {
     color: var(--primary);
   }

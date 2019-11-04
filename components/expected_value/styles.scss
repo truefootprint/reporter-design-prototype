@@ -1,0 +1,12 @@
+@import "../layout/color.scss";
+
+.expected_value {
+  font-size: 2.2vh;
+  font-style: italic;
+}
+
+@include themed(":global(.card)") {
+  .expected_value {
+    color: var(--primary);
+  }
+}

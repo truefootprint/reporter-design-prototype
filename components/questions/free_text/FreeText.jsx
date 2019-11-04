@@ -23,9 +23,6 @@ const FreeText = ({ text, placeholder, expected, unit }) => {
 
   return (
     <div className={css.free_text}>
-      <p>{text}</p>
-      <p className={css.expected}>{expected}</p>
-
       <div className={css.field}>
         <span className={css.unit}>{unit}</span>
 
