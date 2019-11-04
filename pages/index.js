@@ -9,7 +9,9 @@ import GardenPath from "../components/views/garden_path";
 
 const Index = () => {
   const [view, setView] = useState("projects");
-  const props = { setView };
+  const [cardIndex, setCardIndex] = useState(0);
+
+  const props = { setView, cardIndex, setCardIndex };
 
   return (
     <Layout>

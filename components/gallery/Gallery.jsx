@@ -8,12 +8,12 @@ const minOpacity = 0.7;
 const LEFT_KEY = 37;
 const RIGHT_KEY = 39;
 
-const Gallery = ({ children, channel={} }) => {
+const Gallery = ({ children, channel={}, cardIndex=0 }) => {
   const [sizes, setSizes] = useState(children.map(_ => 1));
   const [opacities, setOpacities] = useState(children.map(_ => 0));
 
   const [baseWidth, setBaseWidth] = useState(null);
-  const [itemIndex, setItemIndex] = useState(0);
+  const [itemIndex, setItemIndex] = useState(cardIndex);
 
   const galleryRef = useRef();
   const itemRefs = useRef(children.map(c => createRef()));
@@ -94,6 +94,10 @@ const Gallery = ({ children, channel={} }) => {
   useEffect(() => {
     galleryRef.current.scroll({ left: itemIndex * baseWidth, behavior: "smooth" });
   }, [itemIndex]);
+
+  useEffect(() => {
+    galleryRef.current.scroll({ left: itemIndex * baseWidth, behavior: "smooth" });
+  }, [baseWidth]);
 
   return (
     <div ref={galleryRef} className={css.gallery} onScroll={scaleItems}>

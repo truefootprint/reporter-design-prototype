@@ -8,7 +8,7 @@ import ExpectedValue from "../expected_value";
 
 let c;
 
-const GardenPath = ({ setView }) => <>
+const GardenPath = ({ setView, cardIndex, setCardIndex }) => <>
   <Summary className="green">
     <h1>A new path in the front garden</h1>
     <h2>Project summary</h2>
@@ -18,11 +18,11 @@ const GardenPath = ({ setView }) => <>
     <button>Issues in this project (7)</button>
   </Summary>
 
-  <Gallery>
+  <Gallery cardIndex={cardIndex}>
     <Card className="green">
       <span className="ordinal">1 of 4</span>
       <h3>Remove old path</h3>
-      <button className="alt1" onClick={() => setView("garden_path_remove")}>
+      <button className="alt1" onClick={() => { setView("garden_path_remove"); setCardIndex(0); }}>
         Update progress
       </button>
       <button>Record an issue</button>
@@ -31,7 +31,7 @@ const GardenPath = ({ setView }) => <>
     <Card className="yellow">
       <span className="ordinal">2 of 4</span>
       <h3>Lay foundation</h3>
-      <button className="alt1" onClick={() => setView("garden_path_foundation")}>
+      <button className="alt1" onClick={() => { setView("garden_path_foundation"); setCardIndex(0); }}>
         Update progress
       </button>
       <button>Record an issue</button>
@@ -40,7 +40,7 @@ const GardenPath = ({ setView }) => <>
     <Card className="blue">
       <span className="ordinal">3 of 4</span>
       <h3>Laying the tiles</h3>
-      <button className="alt1" onClick={() => setView("garden_path_tiles")}>
+      <button className="alt1" onClick={() => { setView("garden_path_tiles"); setCardIndex(0); }}>
         Update progress
       </button>
       <button>Record an issue</button>
@@ -49,7 +49,7 @@ const GardenPath = ({ setView }) => <>
     <Card className="purple">
       <span className="ordinal">4 of 4</span>
       <h3>Using the path</h3>
-      <button className="alt1" onClick={() => setView("garden_path_ongoing")}>
+      <button className="alt1" onClick={() => { setView("garden_path_ongoing"); setCardIndex(0); }}>
         Update progress
       </button>
       <button>Record an issue</button>
@@ -57,8 +57,8 @@ const GardenPath = ({ setView }) => <>
   </Gallery>
 </>;
 
-GardenPath.Remove = ({ setView }) => (
-  <Gallery channel={c={}}>
+GardenPath.Remove = ({ setView, cardIndex, setCardIndex }) => (
+  <Gallery channel={c={}} cardIndex={cardIndex}>
     <Card className="green">
       <span className="ordinal">1 of 3</span>
       <h3>Remove old path</h3>
@@ -80,13 +80,13 @@ GardenPath.Remove = ({ setView }) => (
       <h3>Remove old path</h3>
       <QuestionText>Has this activity been completed?</QuestionText>
       <MultiChoice choices={["Yes", "No", "Not sure"]} />
-      <button className="alt1">Submit</button>
+      <button className="alt1" onClick={() => { setCardIndex(1); setView("garden_path"); }}>Submit</button>
     </Card>
   </Gallery>
 );
 
-GardenPath.Foundation = ({ setView }) => (
-  <Gallery channel={c={}}>
+GardenPath.Foundation = ({ setView, cardIndex, setCardIndex }) => (
+  <Gallery channel={c={}} cardIndex={cardIndex}>
     <Card className="green">
       <span className="ordinal">1 of 9</span>
       <h3>Lay foundation</h3>
@@ -158,14 +158,14 @@ GardenPath.Foundation = ({ setView }) => (
       <h3>Lay foundation</h3>
       <QuestionText>Has this activity been completed?</QuestionText>
       <MultiChoice choices={["Yes", "No", "Not sure"]} />
-      <button className="alt1">Submit</button>
+      <button className="alt1" onClick={() => { setCardIndex(2); setView("garden_path"); }}>Submit</button>
     </Card>
 
   </Gallery>
 );
 
-GardenPath.Tiles = ({ setView }) => (
-  <Gallery channel={c={}}>
+GardenPath.Tiles = ({ setView, cardIndex, setCardIndex }) => (
+  <Gallery channel={c={}} cardIndex={cardIndex}>
     <Card className="green">
       <span className="ordinal">1 of 12</span>
       <h3>Laying the tiles</h3>
@@ -259,13 +259,13 @@ GardenPath.Tiles = ({ setView }) => (
       <h3>Lay foundation</h3>
       <QuestionText>Has this activity been completed?</QuestionText>
       <MultiChoice choices={["Yes", "No", "Not sure"]} />
-      <button className="alt1">Submit</button>
+      <button className="alt1" onClick={() => { setCardIndex(3); setView("garden_path"); }}>Submit</button>
     </Card>
   </Gallery>
 );
 
-GardenPath.Ongoing = ({ setView }) => (
-  <Gallery channel={c={}}>
+GardenPath.Ongoing = ({ setView, cardIndex, setCardIndex }) => (
+  <Gallery channel={c={}} cardIndex={cardIndex}>
     <Card className="green">
       <span className="ordinal">1 of 3</span>
       <h3>Using the path</h3>
