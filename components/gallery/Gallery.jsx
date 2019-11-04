@@ -8,7 +8,7 @@ const minOpacity = 0.7;
 const LEFT_KEY = 37;
 const RIGHT_KEY = 39;
 
-const Gallery = ({ children }) => {
+const Gallery = ({ children, channel={} }) => {
   const [sizes, setSizes] = useState(children.map(_ => 1));
   const [opacities, setOpacities] = useState(children.map(_ => 0));
 
@@ -88,6 +88,8 @@ const Gallery = ({ children }) => {
 
   const left = () => setItemIndex(i => Math.max(i - 1, 0));
   const right = () => setItemIndex(i => Math.min(i + 1, children.length - 1));
+
+  channel.next = right;
 
   useEffect(() => {
     galleryRef.current.scroll({ left: itemIndex * baseWidth, behavior: "smooth" });
