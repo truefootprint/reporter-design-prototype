@@ -9,10 +9,12 @@ import ExpectedValue from "../expected_value";
 
 let c;
 
-const GardenPath = ({ setView, cardIndex, setCardIndex, setScroll }) => {
+const GardenPath = ({ setView, cardIndex, setCardIndex, setScroll, setTitle }) => {
   const ref = useRef();
 
   useEffect(() => {
+    setTitle(null);
+
     if (cardIndex > 0) {
       setScroll(ref.current.getBoundingClientRect().top);
     }
@@ -22,6 +24,12 @@ const GardenPath = ({ setView, cardIndex, setCardIndex, setScroll }) => {
     setView(view);
     setCardIndex(0);
     setScroll(0);
+    setTitle({
+      "garden_path_remove": "Remove old path",
+      "garden_path_foundation": "Lay foundation",
+      "garden_path_tiles": "Laying the tiles",
+      "garden_path_ongoing": "Using the path",
+    }[view]);
   }
 
   return <>
@@ -74,7 +82,7 @@ const GardenPath = ({ setView, cardIndex, setCardIndex, setScroll }) => {
   </>;
 };
 
-GardenPath.Remove = ({ setView, cardIndex, setCardIndex }) => (
+GardenPath.Remove = ({ setView, cardIndex, setCardIndex, setTitle }) => (
   <Gallery channel={c={}} cardIndex={cardIndex}>
     <Card className="green">
       <span className="ordinal">1 of 3</span>
