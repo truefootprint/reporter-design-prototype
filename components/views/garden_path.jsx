@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import Summary from "../summary";
 import Gallery from "../gallery";
 import Card from "../card";
@@ -8,54 +9,70 @@ import ExpectedValue from "../expected_value";
 
 let c;
 
-const GardenPath = ({ setView, cardIndex, setCardIndex }) => <>
-  <Summary className="green">
-    <h1>A new path in the front garden</h1>
-    <h2>Project summary</h2>
-    <p>The contract states that a black and white mosaic tile pattern will be laid on a foundation made of good quality cement. The path will be 92cm wide and 212 cm long, leading from gate to doorstep. It will be smooth. The actual contract can be read here....</p>
-    <button>Project contract</button>
-    <button>Record an issue</button>
-    <button>Issues in this project (7)</button>
-  </Summary>
+const GardenPath = ({ setView, cardIndex, setCardIndex, setScroll }) => {
+  const ref = useRef();
 
-  <Gallery cardIndex={cardIndex}>
-    <Card className="green">
-      <span className="ordinal">1 of 4</span>
-      <h3>Remove old path</h3>
-      <button className="alt1" onClick={() => { setView("garden_path_remove"); setCardIndex(0); }}>
-        Update progress
-      </button>
-      <button>Record an issue</button>
-    </Card>
+  useEffect(() => {
+    if (cardIndex > 0) {
+      setScroll(ref.current.getBoundingClientRect().top);
+    }
+  }, []);
 
-    <Card className="yellow">
-      <span className="ordinal">2 of 4</span>
-      <h3>Lay foundation</h3>
-      <button className="alt1" onClick={() => { setView("garden_path_foundation"); setCardIndex(0); }}>
-        Update progress
-      </button>
-      <button>Record an issue</button>
-    </Card>
+  const handleSubmit = (view) => {
+    setView(view);
+    setCardIndex(0);
+    setScroll(0);
+  }
 
-    <Card className="blue">
-      <span className="ordinal">3 of 4</span>
-      <h3>Laying the tiles</h3>
-      <button className="alt1" onClick={() => { setView("garden_path_tiles"); setCardIndex(0); }}>
-        Update progress
-      </button>
+  return <>
+    <Summary className="green">
+      <h1>A new path in the front garden</h1>
+      <h2>Project summary</h2>
+      <p>The contract states that a black and white mosaic tile pattern will be laid on a foundation made of good quality cement. The path will be 92cm wide and 212 cm long, leading from gate to doorstep. It will be smooth. The actual contract can be read here....</p>
+      <button>Project contract</button>
       <button>Record an issue</button>
-    </Card>
+      <button>Issues in this project (7)</button>
+    </Summary>
 
-    <Card className="purple">
-      <span className="ordinal">4 of 4</span>
-      <h3>Using the path</h3>
-      <button className="alt1" onClick={() => { setView("garden_path_ongoing"); setCardIndex(0); }}>
-        Update progress
-      </button>
-      <button>Record an issue</button>
-    </Card>
-  </Gallery>
-</>;
+    <Gallery cardIndex={cardIndex}>
+      <Card className="green">
+        <span ref={ref} className="ordinal">1 of 4</span>
+        <h3>Remove old path</h3>
+        <button className="alt1" onClick={() => handleSubmit("garden_path_remove")}>
+          Update progress
+        </button>
+        <button>Record an issue</button>
+      </Card>
+
+      <Card className="yellow">
+        <span className="ordinal">2 of 4</span>
+        <h3>Lay foundation</h3>
+        <button className="alt1" onClick={() => handleSubmit("garden_path_foundation")}>
+          Update progress
+        </button>
+        <button>Record an issue</button>
+      </Card>
+
+      <Card className="blue">
+        <span className="ordinal">3 of 4</span>
+        <h3>Laying the tiles</h3>
+        <button className="alt1" onClick={() => handleSubmit("garden_path_tiles")}>
+          Update progress
+        </button>
+        <button>Record an issue</button>
+      </Card>
+
+      <Card className="purple">
+        <span className="ordinal">4 of 4</span>
+        <h3>Using the path</h3>
+        <button className="alt1" onClick={() => handleSubmit("garden_path_ongoing")}>
+          Update progress
+        </button>
+        <button>Record an issue</button>
+      </Card>
+    </Gallery>
+  </>;
+};
 
 GardenPath.Remove = ({ setView, cardIndex, setCardIndex }) => (
   <Gallery channel={c={}} cardIndex={cardIndex}>

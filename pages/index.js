@@ -10,13 +10,14 @@ import GardenPath from "../components/views/garden_path";
 const Index = () => {
   const [view, setView] = useState("projects");
   const [cardIndex, setCardIndex] = useState(0);
+  const [scroll, setScroll] = useState(0);
 
-  const props = { setView, cardIndex, setCardIndex };
+  const props = { setView, cardIndex, setCardIndex, setScroll };
 
   return (
     <Layout>
       <Phone>
-        <CardLayout>
+        <CardLayout scroll={scroll}>
           { view === "projects"               && <ProjectView {...props} /> }
 
           { view === "garden_path"            && <GardenPath {...props} /> }
