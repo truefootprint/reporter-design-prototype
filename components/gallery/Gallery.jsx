@@ -83,7 +83,7 @@ const Gallery = ({ children }) => {
 
     // TODO: unbind swipe listener
 
-    return () => window.removeEventListener(listener);
+    return () => window.removeEventListener("keydown", listener);
   }, []);
 
   const left = () => setItemIndex(i => Math.max(i - 1, 0));
