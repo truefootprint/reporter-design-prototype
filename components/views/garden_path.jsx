@@ -141,6 +141,7 @@ GardenPath.Foundation = ({ setView, cardIndex, setCardIndex }) => (
       <h3>Sizes and position</h3>
       <QuestionText>What is the width of the foundation?</QuestionText>
       <ExpectedValue>It should be 92 centimeters wide</ExpectedValue>
+      <em>You measure from the outside border to the other outside border.</em>
       <FreeText placeholder="Add a value" unit="cm" />
       <button className="alt1" onClick={() => c.next()}>Submit</button>
     </Card>
