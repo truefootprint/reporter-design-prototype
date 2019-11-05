@@ -33,8 +33,8 @@ const GardenPath = ({ setView, cardIndex, setCardIndex, setScroll, setTitle }) =
   }
 
   return <>
-    <Summary className="green">
       <h1>A new path in the front garden</h1>
+    <Summary>
       <h2>Project summary</h2>
       <p>The contract states that a black and white mosaic tile pattern will be laid on a foundation made of good quality cement. The path will be 92cm wide and 212 cm long, leading from gate to doorstep. It will be smooth. The actual contract can be read here....</p>
       <button>Project contract</button>
