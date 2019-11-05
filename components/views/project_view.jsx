@@ -9,7 +9,7 @@ const ProjectView = ({ setView, setTitle }) => {
     <Gallery>
       <Card className="green" onClick={() => setView("garden_path")}>
         <span className="ordinal">1 of 2</span>
-        <h3>A new path in the front garden</h3>
+        <h3>A path in the front garden</h3>
         <img src="/images/garden_path.jpg" />
       </Card>
 
