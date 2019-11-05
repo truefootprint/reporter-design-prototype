@@ -115,7 +115,7 @@ Fred.Dinner = ({ setView, cardIndex, setCardIndex, setTitle }) => (
       <button className="alt1" onClick={() => c.next()}>Submit</button>
     </Card>
 
-    <Card className="green">
+    <Card className="green-2">
       <span className="ordinal">1 of 3</span>
       <h3>Gather ingredients</h3>
       <QuestionText>What do we have in the fridge?</QuestionText>
@@ -123,7 +123,7 @@ Fred.Dinner = ({ setView, cardIndex, setCardIndex, setTitle }) => (
       <button className="alt1" onClick={() => c.next()}>Submit</button>
     </Card>
 
-    <Card className="green">
+    <Card className="green-2">
       <span className="ordinal">2 of 3</span>
       <h3>Gather ingredients</h3>
       <QuestionText>What do we have in the freezer?</QuestionText>
@@ -131,7 +131,7 @@ Fred.Dinner = ({ setView, cardIndex, setCardIndex, setTitle }) => (
       <button className="alt1" onClick={() => c.next()}>Submit</button>
     </Card>
 
-    <Card className="green">
+    <Card className="green-2">
       <span className="ordinal">3 of 3</span>
       <h3>Gather ingredients</h3>
       <QuestionText>Have we got leftovers?</QuestionText>
@@ -139,7 +139,7 @@ Fred.Dinner = ({ setView, cardIndex, setCardIndex, setTitle }) => (
       <button className="alt1" onClick={() => c.next()}>Submit</button>
     </Card>
 
-    <Card className="green">
+    <Card className="green-3">
       <span className="ordinal">1 of 2</span>
       <h3>Cook dinner</h3>
       <QuestionText>Is the frying pan clean?</QuestionText>
@@ -147,7 +147,7 @@ Fred.Dinner = ({ setView, cardIndex, setCardIndex, setTitle }) => (
       <button className="alt1" onClick={() => c.next()}>Submit</button>
     </Card>
 
-    <Card className="green">
+    <Card className="green-3">
       <span className="ordinal">2 of 2</span>
       <h3>Cook dinner</h3>
       <QuestionText>How much salt is added?</QuestionText>
@@ -156,7 +156,7 @@ Fred.Dinner = ({ setView, cardIndex, setCardIndex, setTitle }) => (
       <button className="alt1" onClick={() => c.next()}>Submit</button>
     </Card>
 
-    <Card className="green">
+    <Card className="green-4">
       <span className="ordinal">1 of 2</span>
       <h3>Chase down Fred</h3>
       <QuestionText>Where is Fred?</QuestionText>
@@ -164,7 +164,7 @@ Fred.Dinner = ({ setView, cardIndex, setCardIndex, setTitle }) => (
       <button className="alt1" onClick={() => c.next()}>Submit</button>
     </Card>
 
-    <Card className="green">
+    <Card className="green-4">
       <span className="ordinal">2 of 2</span>
       <h3>Chase down Fred</h3>
       <QuestionText>Is the highchair clean?</QuestionText>
@@ -174,7 +174,7 @@ Fred.Dinner = ({ setView, cardIndex, setCardIndex, setTitle }) => (
     </Card>
 
     <Card className="green">
-      <span className="ordinal">1 of 6</span>
+      <span className="ordinal">1 of 7</span>
       <h3>Sit Fred in highchair and feed him</h3>
       <QuestionText>Is Fred clipped in?</QuestionText>
       <em>Fred should be clipped in now because he keeps standing up in the highchair</em>
@@ -183,7 +183,7 @@ Fred.Dinner = ({ setView, cardIndex, setCardIndex, setTitle }) => (
     </Card>
 
     <Card className="green">
-      <span className="ordinal">2 of 6</span>
+      <span className="ordinal">2 of 7</span>
       <h3>Sit Fred in highchair and feed him</h3>
       <QuestionText>Does Fred’s mum reprimand him for throwing food on the floor?</QuestionText>
       <MultiChoice choices={["Yes", "No", "Not sure"]} />
@@ -191,7 +191,7 @@ Fred.Dinner = ({ setView, cardIndex, setCardIndex, setTitle }) => (
     </Card>
 
     <Card className="green">
-      <span className="ordinal">3 of 6</span>
+      <span className="ordinal">3 of 7</span>
       <h3>Sit Fred in highchair and feed him</h3>
       <QuestionText>How much does Fred eat?</QuestionText>
       <MultiChoice choices={["All of it", "Some of it", "None of it"]} />
@@ -199,7 +199,7 @@ Fred.Dinner = ({ setView, cardIndex, setCardIndex, setTitle }) => (
     </Card>
 
     <Card className="green">
-      <span className="ordinal">4 of 6</span>
+      <span className="ordinal">4 of 7</span>
       <h3>Sit Fred in highchair and feed him</h3>
       <QuestionText>Has Fred had some water?</QuestionText>
       <MultiChoice choices={["Yes", "No", "Not sure"]} />
@@ -207,7 +207,7 @@ Fred.Dinner = ({ setView, cardIndex, setCardIndex, setTitle }) => (
     </Card>
 
     <Card className="green">
-      <span className="ordinal">5 of 6</span>
+      <span className="ordinal">5 of 7</span>
       <h3>Sit Fred in highchair and feed him</h3>
       <QuestionText>Has Fred’s mum persuaded him to have more?</QuestionText>
       <MultiChoice choices={["Yes", "No", "Not sure"]} />
@@ -215,11 +215,19 @@ Fred.Dinner = ({ setView, cardIndex, setCardIndex, setTitle }) => (
     </Card>
 
     <Card className="green">
-      <span className="ordinal">6 of 6</span>
+      <span className="ordinal">6 of 7</span>
       <h3>Sit Fred in highchair and feed him</h3>
       <QuestionText>Has Fred’s mum cleaned him with a wet wipe after he has eaten?</QuestionText>
       <MultiChoice choices={["Yes", "No", "Not sure"]} />
       <button className="alt1" onClick={() => c.next()}>Submit</button>
+    </Card>
+
+    <Card className="black">
+      <span className="ordinal">7 of 7</span>
+      <h3>Sit Fred in highchair and feed him</h3>
+      <QuestionText>Has this activity been completed?</QuestionText>
+      <MultiChoice choices={["Yes", "No", "Not sure"]} />
+      <button className="alt1" onClick={() => { setCardIndex(1); setView("fred"); }}>Submit</button>
     </Card>
   </Gallery>
 );
@@ -242,7 +250,7 @@ Fred.Bath = ({ setView, cardIndex, setCardIndex }) => (
       <button className="alt1" onClick={() => c.next()}>Submit</button>
     </Card>
 
-    <Card className="red">
+    <Card className="red-2">
       <span className="ordinal">1 of 1</span>
       <h3>Check the temperature</h3>
       <QuestionText>Is the temperature below 38 degrees?</QuestionText>
@@ -251,7 +259,7 @@ Fred.Bath = ({ setView, cardIndex, setCardIndex }) => (
       <button className="alt1" onClick={() => c.next()}>Submit</button>
     </Card>
 
-    <Card className="red">
+    <Card className="red-3">
       <span className="ordinal">1 of 2</span>
       <h3>Find the bath toys</h3>
       <QuestionText>Where are the bath toys?</QuestionText>
@@ -259,7 +267,7 @@ Fred.Bath = ({ setView, cardIndex, setCardIndex }) => (
       <button className="alt1" onClick={() => c.next()}>Submit</button>
     </Card>
 
-    <Card className="red">
+    <Card className="red-3">
       <span className="ordinal">2 of 2</span>
       <h3>Find the bath toys</h3>
       <QuestionText>Which bath toys does Fred want today?</QuestionText>
@@ -267,7 +275,7 @@ Fred.Bath = ({ setView, cardIndex, setCardIndex }) => (
       <button className="alt1" onClick={() => c.next()}>Submit</button>
     </Card>
 
-    <Card className="red">
+    <Card className="red-4">
       <span className="ordinal">1 of 2</span>
       <h3>Undress Fred</h3>
       <QuestionText>Are his buttons undone before the top is pulled over his head?</QuestionText>
@@ -275,7 +283,7 @@ Fred.Bath = ({ setView, cardIndex, setCardIndex }) => (
       <button className="alt1" onClick={() => c.next()}>Submit</button>
     </Card>
 
-    <Card className="red">
+    <Card className="red-4">
       <span className="ordinal">2 of 2</span>
       <h3>Undress Fred</h3>
       <QuestionText>Can the clothes be worn another day?</QuestionText>
@@ -324,7 +332,7 @@ Fred.Bath = ({ setView, cardIndex, setCardIndex }) => (
       <button className="alt1" onClick={() => c.next()}>Submit</button>
     </Card>
 
-    <Card className="red">
+    <Card className="red-2">
       <span className="ordinal">1 of 1</span>
       <h3>Dry Fred</h3>
       <QuestionText>Do you know where Fred’s towel is?</QuestionText>
@@ -332,28 +340,36 @@ Fred.Bath = ({ setView, cardIndex, setCardIndex }) => (
       <button className="alt1" onClick={() => c.next()}>Submit</button>
     </Card>
 
-    <Card className="red">
-      <span className="ordinal">1 of 3</span>
+    <Card className="red-3">
+      <span className="ordinal">1 of 4</span>
       <h3>Dress Fred in warm, clean pyjamas</h3>
       <QuestionText>Has Fred got a clean nappy on?</QuestionText>
       <MultiChoice choices={["Yes", "No", "Not sure"]} />
       <button className="alt1" onClick={() => c.next()}>Submit</button>
     </Card>
 
-    <Card className="red">
-      <span className="ordinal">2 of 3</span>
+    <Card className="red-3">
+      <span className="ordinal">2 of 4</span>
       <h3>Dress Fred in warm, clean pyjamas</h3>
       <QuestionText>Do you know where his pyjamas are?</QuestionText>
       <MultiChoice choices={["Yes", "No", "Not sure"]} />
       <button className="alt1" onClick={() => c.next()}>Submit</button>
     </Card>
 
-    <Card className="red">
-      <span className="ordinal">3 of 3</span>
+    <Card className="red-3">
+      <span className="ordinal">3 of 4</span>
       <h3>Dress Fred in warm, clean pyjamas</h3>
       <QuestionText>Does Fred need distraction when getting dressed?</QuestionText>
       <MultiChoice choices={["Yes", "No", "Not sure"]} />
       <button className="alt1" onClick={() => c.next()}>Submit</button>
+    </Card>
+
+    <Card className="black">
+      <span className="ordinal">4 of 4</span>
+      <h3>Dress Fred in warm, clean pyjamas</h3>
+      <QuestionText>Has this activity been completed?</QuestionText>
+      <MultiChoice choices={["Yes", "No", "Not sure"]} />
+      <button className="alt1" onClick={() => { setCardIndex(2); setView("fred"); }}>Submit</button>
     </Card>
   </Gallery>
 );
@@ -376,7 +392,7 @@ Fred.Play = ({ setView, cardIndex, setCardIndex }) => (
       <button className="alt1" onClick={() => c.next()}>Submit</button>
     </Card>
 
-    <Card className="blue">
+    <Card className="blue-2">
       <span className="ordinal">1 of 3</span>
       <h3>Make Fred laugh</h3>
       <QuestionText>Is Fred having fun?</QuestionText>
@@ -384,7 +400,7 @@ Fred.Play = ({ setView, cardIndex, setCardIndex }) => (
       <button className="alt1" onClick={() => c.next()}>Submit</button>
     </Card>
 
-    <Card className="blue">
+    <Card className="blue-2">
       <span className="ordinal">2 of 3</span>
       <h3>Make Fred laugh</h3>
       <QuestionText>Is he enjoying reading or playing more?</QuestionText>
@@ -392,7 +408,7 @@ Fred.Play = ({ setView, cardIndex, setCardIndex }) => (
       <button className="alt1" onClick={() => c.next()}>Submit</button>
     </Card>
 
-    <Card className="blue">
+    <Card className="blue-2">
       <span className="ordinal">3 of 3</span>
       <h3>Make Fred laugh</h3>
       <QuestionText>Is Fred playing independently?</QuestionText>

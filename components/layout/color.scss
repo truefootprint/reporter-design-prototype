@@ -92,4 +92,24 @@
 
     @content;
   }
+
+  #{$selector}:global(.green-2) { --primary: var(--green-primary-tint); @content; }
+  #{$selector}:global(.green-3) { --primary: var(--green-secondary); @content; }
+  #{$selector}:global(.green-4) { --primary: var(--green-secondary-tint); @content; }
+
+  #{$selector}:global(.yellow-2) { --primary: var(--yellow-primary-tint); @content; }
+  #{$selector}:global(.yellow-3) { --primary: var(--yellow-secondary); @content; }
+  #{$selector}:global(.yellow-4) { --primary: var(--yellow-secondary-tint); @content; }
+
+  #{$selector}:global(.blue-2) { --primary: var(--blue-primary-tint); @content; }
+  #{$selector}:global(.blue-3) { --primary: var(--blue-secondary); @content; }
+  #{$selector}:global(.blue-4) { --primary: var(--blue-secondary-tint); @content; }
+
+  #{$selector}:global(.red-2) { --primary: var(--red-primary-tint); @content; }
+  #{$selector}:global(.red-3) { --primary: var(--red-secondary); @content; }
+  #{$selector}:global(.red-4) { --primary: var(--red-secondary-tint); @content; }
+
+  #{$selector}:global(.purple-2) { --primary: var(--purple-primary-tint); @content; }
+  #{$selector}:global(.purple-3) { --primary: var(--purple-secondary); @content; }
+  #{$selector}:global(.purple-4) { --primary: var(--purple-secondary-tint); @content; }
 }

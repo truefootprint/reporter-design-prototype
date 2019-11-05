@@ -70,7 +70,7 @@ const GardenPath = ({ setView, cardIndex, setCardIndex, setScroll, setTitle }) =
         <button>Record an issue</button>
       </Card>
 
-      <Card className="yellow">
+      <Card className="red">
         <span className="ordinal">2 of 4</span>
         <h3>Lay foundation</h3>
         <button className="alt1" onClick={() => handleSubmit("garden_path_foundation", 1)}>
@@ -88,7 +88,7 @@ const GardenPath = ({ setView, cardIndex, setCardIndex, setScroll, setTitle }) =
         <button>Record an issue</button>
       </Card>
 
-      <Card className="purple">
+      <Card className="yellow">
         <span className="ordinal">4 of 4</span>
         <h3>Using the path</h3>
         <button className="alt1" onClick={() => handleSubmit("garden_path_ongoing", 3)}>
@@ -110,7 +110,7 @@ GardenPath.Remove = ({ setView, cardIndex, setCardIndex, setTitle }) => (
       <button className="alt1" onClick={() => c.next()}>Submit</button>
     </Card>
 
-    <Card className="yellow">
+    <Card className="green">
       <span className="ordinal">2 of 3</span>
       <h3>Removal</h3>
       <QuestionText>Any comments about removal of old path?</QuestionText>
@@ -130,32 +130,32 @@ GardenPath.Remove = ({ setView, cardIndex, setCardIndex, setTitle }) => (
 
 GardenPath.Foundation = ({ setView, cardIndex, setCardIndex }) => (
   <Gallery channel={c={}} cardIndex={cardIndex}>
-    <Card className="green">
-      <span className="ordinal">1 of 9</span>
+    <Card className="red">
+      <span className="ordinal">1 of 3</span>
       <h3>Cement</h3>
       <QuestionText>Does the cement float in water? </QuestionText>
       <MultiChoice choices={["Yes", "No", "Not sure"]} />
       <button className="alt1" onClick={() => c.next()}>Submit</button>
     </Card>
 
-    <Card className="yellow">
-      <span className="ordinal">2 of 9</span>
+    <Card className="red">
+      <span className="ordinal">2 of 3</span>
       <h3>Cement</h3>
       <QuestionText>Does it contain lumps?</QuestionText>
       <MultiChoice choices={["Yes", "No", "Not sure"]} />
       <button className="alt1" onClick={() => c.next()}>Submit</button>
     </Card>
 
-    <Card className="blue">
-      <span className="ordinal">3 of 9</span>
+    <Card className="red">
+      <span className="ordinal">3 of 3</span>
       <h3>Cement</h3>
       <QuestionText>Any comments about the cement?</QuestionText>
       <FreeText placeholder="Add a comment" />
       <button className="alt1" onClick={() => c.next()}>Submit</button>
     </Card>
 
-    <Card className="red">
-      <span className="ordinal">4 of 9</span>
+    <Card className="red-2">
+      <span className="ordinal">1 of 6</span>
       <h3>Sizes and position</h3>
       <QuestionText>What is the width of the foundation?</QuestionText>
       <ExpectedValue>It should be 92 centimeters wide</ExpectedValue>
@@ -164,8 +164,8 @@ GardenPath.Foundation = ({ setView, cardIndex, setCardIndex }) => (
       <button className="alt1" onClick={() => c.next()}>Submit</button>
     </Card>
 
-    <Card className="purple">
-      <span className="ordinal">5 of 9</span>
+    <Card className="red-2">
+      <span className="ordinal">2 of 6</span>
       <h3>Sizes and position</h3>
       <QuestionText>What is the length of the foundation?</QuestionText>
       <ExpectedValue>It should be 212 centimeters long</ExpectedValue>
@@ -173,24 +173,24 @@ GardenPath.Foundation = ({ setView, cardIndex, setCardIndex }) => (
       <button className="alt1" onClick={() => c.next()}>Submit</button>
     </Card>
 
-    <Card className="green">
-      <span className="ordinal">6 of 9</span>
+    <Card className="red-2">
+      <span className="ordinal">3 of 6</span>
       <h3>Sizes and position</h3>
       <QuestionText>Is the foundation going from gate to doorstep?</QuestionText>
       <MultiChoice choices={["Yes", "No", "Not sure"]} />
       <button className="alt1" onClick={() => c.next()}>Submit</button>
     </Card>
 
-    <Card className="yellow">
-      <span className="ordinal">7 of 9</span>
+    <Card className="red-2">
+      <span className="ordinal">4 of 6</span>
       <h3>Sizes and position</h3>
       <QuestionText>Is the surface smooth?</QuestionText>
       <MultiChoice choices={["Yes", "No", "Not sure"]} />
       <button className="alt1" onClick={() => c.next()}>Submit</button>
     </Card>
 
-    <Card className="blue">
-      <span className="ordinal">8 of 9</span>
+    <Card className="red-2">
+      <span className="ordinal">5 of 6</span>
       <h3>Sizes and position</h3>
       <QuestionText>Any comments about the foundation?</QuestionText>
       <FreeText placeholder="Add a comment" />
@@ -198,7 +198,7 @@ GardenPath.Foundation = ({ setView, cardIndex, setCardIndex }) => (
     </Card>
 
     <Card className="black">
-      <span className="ordinal">9 of 9</span>
+      <span className="ordinal">6 of 6</span>
       <h3>Sizes and position</h3>
       <QuestionText>Has this activity been completed?</QuestionText>
       <MultiChoice choices={["Yes", "No", "Not sure"]} />
@@ -210,16 +210,16 @@ GardenPath.Foundation = ({ setView, cardIndex, setCardIndex }) => (
 
 GardenPath.Tiles = ({ setView, cardIndex, setCardIndex }) => (
   <Gallery channel={c={}} cardIndex={cardIndex}>
-    <Card className="green">
-      <span className="ordinal">1 of 12</span>
+    <Card className="blue">
+      <span className="ordinal">1 of 5</span>
       <h3>Tiles</h3>
       <QuestionText>Are the tiles black and white?</QuestionText>
       <MultiChoice choices={["Yes", "No", "Not sure"]} />
       <button className="alt1" onClick={() => c.next()}>Submit</button>
     </Card>
 
-    <Card className="yellow">
-      <span className="ordinal">2 of 12</span>
+    <Card className="blue">
+      <span className="ordinal">2 of 5</span>
       <h3>Tiles</h3>
       <QuestionText>What is the width of the biggest tile?</QuestionText>
       <FreeText placeholder="Add a value" unit="cm" />
@@ -227,71 +227,71 @@ GardenPath.Tiles = ({ setView, cardIndex, setCardIndex }) => (
     </Card>
 
     <Card className="blue">
-      <span className="ordinal">3 of 12</span>
+      <span className="ordinal">3 of 5</span>
       <h3>Tiles</h3>
       <QuestionText>What is the length of the biggest tile?</QuestionText>
       <FreeText placeholder="Add a value" unit="cm" />
       <button className="alt1" onClick={() => c.next()}>Submit</button>
     </Card>
 
-    <Card className="red">
-      <span className="ordinal">4 of 12</span>
+    <Card className="blue">
+      <span className="ordinal">4 of 5</span>
       <h3>Tiles</h3>
       <QuestionText>Are there any broken tiles?</QuestionText>
       <MultiChoice choices={["Yes", "No", "Not sure"]} />
       <button className="alt1" onClick={() => c.next()}>Submit</button>
     </Card>
 
-    <Card className="purple">
-      <span className="ordinal">5 of 12</span>
+    <Card className="blue">
+      <span className="ordinal">5 of 5</span>
       <h3>Tiles</h3>
       <QuestionText>Any comments about the tiles?</QuestionText>
       <FreeText placeholder="Add a comment" />
       <button className="alt1" onClick={() => c.next()}>Submit</button>
     </Card>
 
-    <Card className="green">
-      <span className="ordinal">6 of 12</span>
+    <Card className="blue-2">
+      <span className="ordinal">1 of 4</span>
       <h3>Laying them</h3>
       <QuestionText>Have the tiles been laid in a mosaic pattern?</QuestionText>
       <MultiChoice choices={["Yes", "No", "Not sure"]} />
       <button className="alt1" onClick={() => c.next()}>Submit</button>
     </Card>
 
-    <Card className="yellow">
-      <span className="ordinal">7 of 12</span>
+    <Card className="blue-2">
+      <span className="ordinal">2 of 4</span>
       <h3>Laying them</h3>
       <QuestionText>Do the tiles cover the foundation entirely?</QuestionText>
       <MultiChoice choices={["Yes", "No", "Not sure"]} />
       <button className="alt1" onClick={() => c.next()}>Submit</button>
     </Card>
 
-    <Card className="blue">
-      <span className="ordinal">8 of 12</span>
+    <Card className="blue-2">
+      <span className="ordinal">3 of 4</span>
       <h3>Laying them</h3>
       <QuestionText>Is the surface even?</QuestionText>
       <MultiChoice choices={["Yes", "No", "Not sure"]} />
       <button className="alt1" onClick={() => c.next()}>Submit</button>
     </Card>
 
-    <Card className="red">
-      <span className="ordinal">9 of 12</span>
+    <Card className="blue-2">
+      <span className="ordinal">4 of 4</span>
       <h3>Laying them</h3>
       <QuestionText>Any comments about laying the tiles?</QuestionText>
       <FreeText placeholder="Add a comment" />
       <button className="alt1" onClick={() => c.next()}>Submit</button>
     </Card>
 
-    <Card className="purple">
-      <span className="ordinal">10 of 12</span>
+    <Card className="blue-3">
+      <span className="ordinal">1 of 3</span>
       <h3>Tidy-up</h3>
       <QuestionText>Have all the remaining tiles been handed over?</QuestionText>
       <MultiChoice choices={["Yes", "No", "Not sure"]} />
       <button className="alt1" onClick={() => c.next()}>Submit</button>
     </Card>
 
-    <Card className="green">
-      <span className="ordinal">11 of 12</span>
+    <Card className="blue-3">
+      <span className="ordinal">2 of 3</span>
       <h3>Tidy-up</h3>
       <QuestionText>Have all the remaining items been removed from the premises?</QuestionText>
       <MultiChoice choices={["Yes", "No", "Not sure"]} />
@@ -299,7 +299,7 @@ GardenPath.Tiles = ({ setView, cardIndex, setCardIndex }) => (
     </Card>
 
     <Card className="black">
-      <span className="ordinal">12 of 12</span>
+      <span className="ordinal">3 of 3</span>
       <h3>Tidy-up</h3>
       <QuestionText>Has this activity been completed?</QuestionText>
       <MultiChoice choices={["Yes", "No", "Not sure"]} />
@@ -310,7 +310,7 @@ GardenPath.Tiles = ({ setView, cardIndex, setCardIndex }) => (
 
 GardenPath.Ongoing = ({ setView, cardIndex, setCardIndex }) => (
   <Gallery channel={c={}} cardIndex={cardIndex}>
-    <Card className="green">
+    <Card className="yellow">
       <span className="ordinal">1 of 3</span>
       <h3>Using the path</h3>
       <QuestionText>Does the new path look good?</QuestionText>
@@ -326,7 +326,7 @@ GardenPath.Ongoing = ({ setView, cardIndex, setCardIndex }) => (
       <button className="alt1" onClick={() => c.next()}>Submit</button>
     </Card>
 
-    <Card className="blue">
+    <Card className="yellow">
       <span className="ordinal">3 of 3</span>
       <h3>Using the path</h3>
       <QuestionText>Overall, how happy are you with the new path?</QuestionText>
