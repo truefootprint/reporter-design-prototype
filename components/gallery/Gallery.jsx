@@ -79,8 +79,6 @@ const Gallery = ({ children, channel={}, cardIndex=0 }) => {
       if (event.direction === Hammer.DIRECTION_LEFT) right();
     });
 
-    window.onback = () => left();
-
     // TODO: unbind swipe listener
 
     return () => window.removeEventListener("keydown", listener);

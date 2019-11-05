@@ -18,9 +18,26 @@ const GardenPath = ({ setView, cardIndex, setCardIndex, setScroll, setTitle }) =
     if (cardIndex > 0) {
       setScroll(ref.current.getBoundingClientRect().top);
     }
+
+    window.onback = () => {
+      setView("projects");
+      setCardIndex(0);
+      setScroll(0);
+    };
   }, []);
 
-  const handleSubmit = (view) => {
+  const backIndex = cardIndex + 0;
+
+  const handleSubmit = (view, backIndex) => {
+    const backScroll = ref.current.getBoundingClientRect().top;
+
+    window.onback = () => {
+      setView("garden_path");
+      setCardIndex(backIndex);
+      setScroll(backScroll);
+      setTitle(null);
+    };
+
     setView(view);
     setCardIndex(0);
     setScroll(0);
@@ -47,7 +64,7 @@ const GardenPath = ({ setView, cardIndex, setCardIndex, setScroll, setTitle }) =
       <Card className="green">
         <span ref={ref} className="ordinal">1 of 4</span>
         <h3>Remove old path</h3>
-        <button className="alt1" onClick={() => handleSubmit("garden_path_remove")}>
+        <button className="alt1" onClick={() => handleSubmit("garden_path_remove", 0)}>
           Update progress
         </button>
         <button>Record an issue</button>
@@ -56,7 +73,7 @@ const GardenPath = ({ setView, cardIndex, setCardIndex, setScroll, setTitle }) =
       <Card className="yellow">
         <span className="ordinal">2 of 4</span>
         <h3>Lay foundation</h3>
-        <button className="alt1" onClick={() => handleSubmit("garden_path_foundation")}>
+        <button className="alt1" onClick={() => handleSubmit("garden_path_foundation", 1)}>
           Update progress
         </button>
         <button>Record an issue</button>
@@ -65,7 +82,7 @@ const GardenPath = ({ setView, cardIndex, setCardIndex, setScroll, setTitle }) =
       <Card className="blue">
         <span className="ordinal">3 of 4</span>
         <h3>Laying the tiles</h3>
-        <button className="alt1" onClick={() => handleSubmit("garden_path_tiles")}>
+        <button className="alt1" onClick={() => handleSubmit("garden_path_tiles", 2)}>
           Update progress
         </button>
         <button>Record an issue</button>
@@ -74,7 +91,7 @@ const GardenPath = ({ setView, cardIndex, setCardIndex, setScroll, setTitle }) =
       <Card className="purple">
         <span className="ordinal">4 of 4</span>
         <h3>Using the path</h3>
-        <button className="alt1" onClick={() => handleSubmit("garden_path_ongoing")}>
+        <button className="alt1" onClick={() => handleSubmit("garden_path_ongoing", 3)}>
           Update progress
         </button>
         <button>Record an issue</button>
