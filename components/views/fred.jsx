@@ -52,7 +52,7 @@ const Fred = ({ setView, cardIndex, setCardIndex, setScroll, setTitle }) => {
     <Summary>
       <h1>Looking after Fred</h1>
       <h2>Project summary</h2>
-      <p>Project summary text</p>
+      <p>Looking after any child isn't easy, but Fred is a tiny terrorist who plays by his own rules. This project can be re-used daily to allow anyone to herd Fred along in life and enable him to be clean, fed and happy.</p>
       <button>Project contract</button>
       <button>Record an issue</button>
       <button>Issues in this project (7)</button>
@@ -62,6 +62,7 @@ const Fred = ({ setView, cardIndex, setCardIndex, setScroll, setTitle }) => {
       <Card className="green">
         <span ref={ref} className="ordinal">1 of 3</span>
         <h3>Dinner time</h3>
+        <p>Fred is hungry, again. He must be fed before he loses it.</p>
         <button className="alt1" onClick={() => handleSubmit("fred_dinner", 0)}>
           Update progress
         </button>
@@ -71,6 +72,7 @@ const Fred = ({ setView, cardIndex, setCardIndex, setScroll, setTitle }) => {
       <Card className="red">
         <span className="ordinal">2 of 3</span>
         <h3>Bath time</h3>
+        <p>Fred is messy from a day of fun in the park. He needs a nice bath to clean him up.</p>
         <button className="alt1" onClick={() => handleSubmit("fred_bath", 1)}>
           Update progress
         </button>
@@ -80,6 +82,7 @@ const Fred = ({ setView, cardIndex, setCardIndex, setScroll, setTitle }) => {
       <Card className="blue">
         <span className="ordinal">3 of 3</span>
         <h3>Play time</h3>
+        <p>Fred's mum wants Fred to sleep through the night so that she can have a glass of wine, a bath and watch RuPaul's Drag Race in peace. Playing with Fred before bed allows his to expel the last bit of energy before his long sleep and makes sure he is a happy baby.</p>
         <button className="alt1" onClick={() => handleSubmit("fred_play", 2)}>
           Update progress
         </button>

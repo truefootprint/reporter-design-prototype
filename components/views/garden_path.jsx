@@ -64,6 +64,7 @@ const GardenPath = ({ setView, cardIndex, setCardIndex, setScroll, setTitle }) =
       <Card className="green">
         <span ref={ref} className="ordinal">1 of 4</span>
         <h3>Remove old path</h3>
+        <p>As part of the contract the builder has committed to remove all the old concrete. There will be no rubbish left and you will not have to go to the tip yourself.</p>
         <button className="alt1" onClick={() => handleSubmit("garden_path_remove", 0)}>
           Update progress
         </button>
@@ -73,6 +74,7 @@ const GardenPath = ({ setView, cardIndex, setCardIndex, setScroll, setTitle }) =
       <Card className="red">
         <span className="ordinal">2 of 4</span>
         <h3>Lay foundation</h3>
+        <p>A common problem with builders laying foundations is that they use inferior quality cement. Sometimes they even don't use any cement and just use sand. In the long run this results in uneven paths. Another common issue is skimping on materials and making the foundation too short or too narrow.</p>
         <button className="alt1" onClick={() => handleSubmit("garden_path_foundation", 1)}>
           Update progress
         </button>
@@ -82,6 +84,7 @@ const GardenPath = ({ setView, cardIndex, setCardIndex, setScroll, setTitle }) =
       <Card className="blue">
         <span className="ordinal">3 of 4</span>
         <h3>Laying the tiles</h3>
+        <p>Key things to look out for during this phase is whether they are using the right tiles, how level the tiles are, and whether they cover the foundation entirely.</p>
         <button className="alt1" onClick={() => handleSubmit("garden_path_tiles", 2)}>
           Update progress
         </button>
@@ -91,6 +94,7 @@ const GardenPath = ({ setView, cardIndex, setCardIndex, setScroll, setTitle }) =
       <Card className="yellow">
         <span className="ordinal">4 of 4</span>
         <h3>Using the path</h3>
+        <p>Throughout the course of the first year it is good to assess from time to time how well the path is working for you.</p>
         <button className="alt1" onClick={() => handleSubmit("garden_path_ongoing", 3)}>
           Update progress
         </button>
