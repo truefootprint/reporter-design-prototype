@@ -6,6 +6,7 @@ import Summary from "../components/summary";
 
 import ProjectView from "../components/views/project_view";
 import GardenPath from "../components/views/garden_path";
+import Fred from "../components/views/fred";
 
 const Index = () => {
   const [view, setView] = useState("projects");
@@ -26,6 +27,11 @@ const Index = () => {
           { view === "garden_path_foundation" && <GardenPath.Foundation {...props} /> }
           { view === "garden_path_tiles"      && <GardenPath.Tiles {...props} /> }
           { view === "garden_path_ongoing"    && <GardenPath.Ongoing {...props} /> }
+
+          { view === "fred"                   && <Fred {...props} /> }
+          { view === "fred_dinner"            && <Fred.Dinner {...props} /> }
+          { view === "fred_bath"              && <Fred.Bath {...props} /> }
+          { view === "fred_play"              && <Fred.Play {...props} /> }
         </CardLayout>
       </Phone>
     </Layout>

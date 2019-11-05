@@ -13,9 +13,9 @@ const ProjectView = ({ setView, setTitle }) => {
         <img src="/images/garden_path.jpg" />
       </Card>
 
-      <Card className="yellow">
+      <Card className="red" onClick={() => setView("fred")}>
         <span className="ordinal">2 of 2</span>
-        <h3>Another project</h3>
+        <h3>Looking after Fred</h3>
       </Card>
     </Gallery>
   );
